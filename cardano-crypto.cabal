@@ -7,7 +7,7 @@ license:             MIT
 license-file:        LICENSE
 author:              Vincent Hanquez
 maintainer:          contact@typed.io
-copyright:           2016-2017 IOHK
+copyright:           2016-2021 IOHK
 category:            Crypto
 build-type:          Simple
 extra-source-files:  README.md
@@ -33,15 +33,12 @@ library
                        Cardano.Crypto.Wallet.Pure
                        Cardano.Crypto.Encoding.BIP39
                        Cardano.Crypto.Encoding.Seed
-                       Cardano.Crypto.Praos.VRF
                        Crypto.Math.Edwards25519
                        Crypto.Math.Bits
                        Crypto.Math.Bytes
                        Crypto.Math.NatMath
                        Crypto.ECC.Ed25519Donna
                        Crypto.ECC.Ed25519BIP32
-                       Crypto.ECC.P256
-                       Crypto.DLEQ
                        Crypto.Encoding.BIP39
                        Crypto.Encoding.BIP39.Dictionary
                        Crypto.Encoding.BIP39.English
@@ -53,7 +50,6 @@ library
                      , basement
                      , foundation
                      , cryptonite >= 0.22
-                     , cryptonite-openssl >= 0.5
                      , hashable
                      , integer-gmp
   default-language:    Haskell2010
@@ -77,8 +73,6 @@ test-suite cardano-crypto-test
                        Test.Cardano.Crypto
                        Test.Cardano.Crypto.Encoding
                        Test.Cardano.Crypto.Encoding.Seed
-                       Test.Cardano.Crypto.Praos
-                       Test.Cardano.Crypto.Praos.VRF
                        Utils
   build-depends:       base
                      , bytestring
